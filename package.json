@@ -1,0 +1,30 @@
+{
+  "name": "mern",
+  "version": "1.0.0",
+  "description": "web",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "bcryptjs": "^2.4.3",
+    "cores": "^0.8.5",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-check": "^0.0.1",
+    "express-validator": "^7.0.1",
+    "gravatar": "^1.8.2",
+    "jsonwebtoken": "^9.0.1",
+    "mongoose": "^7.3.1",
+    "react-router-dom": "^6.14.1",
+    "request": "^2.88.2",
+    "type": "module"
+
+  }
+}
