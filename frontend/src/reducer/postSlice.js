@@ -47,7 +47,7 @@ export function addPost(text){
                 text:text
             };
             console.log(data);
-            await axios.post('http://localhost:5000/api/post',data);
+            await axios.post('https://devlink-o298.onrender.com/api/post',data);
             dispatch(post_error('success'));
             dispatch(getAllPost());
         }
@@ -61,7 +61,7 @@ export function addPost(text){
 export function getAllPost(){
     return async function getAllPostThunks(dispatch,getState){
         try{
-            const res=await axios.get('http://localhost:5000/api/post');
+            const res=await axios.get('https://devlink-o298.onrender.com/api/post');
             dispatch(get_all_post(res.data));
         }
         catch(err){
@@ -73,7 +73,7 @@ export function getAllPost(){
 export function addLike(id){
     return async function addLikeThunks(dispatch,getState){
         try{
-            await axios.put(`http://localhost:5000/api/post/like/${id}`);
+            await axios.put(`https://devlink-o298.onrender.com/api/post/like/${id}`);
             dispatch(getAllPost());
         }
         catch(err){
@@ -84,7 +84,7 @@ export function addLike(id){
 export function addUnlike(id){
     return async function addUnikeThunks(dispatch,getState){
         try{
-            await axios.put(`http://localhost:5000/api/post/unlike/${id}`);
+            await axios.put(`https://devlink-o298.onrender.com/api/post/unlike/${id}`);
             dispatch(getAllPost());
         }
         catch(err){
@@ -96,7 +96,7 @@ export function addUnlike(id){
 export function deletePost(id){
     return async function deletePostThunks(dispatch,getState){
         try{
-            await axios.delete(`http://localhost:5000/api/post/${id}`);
+            await axios.delete(`https://devlink-o298.onrender.com/api/post/${id}`);
             dispatch(getAllPost());
         }
         catch(err){
@@ -108,7 +108,7 @@ export function deletePost(id){
 export function getPost(id){
     return async function deletePostThunks(dispatch,getState){
         try{
-           const res= await axios.get(`http://localhost:5000/api/post/${id}`);
+           const res= await axios.get(`https://devlink-o298.onrender.com/api/post/${id}`);
             dispatch(get_post(res.data));
         }
         catch(err){
@@ -124,7 +124,7 @@ export function addComment(id,text){
             let data = {
                 text:text
             };
-           await axios.post(`http://localhost:5000/api/post/comment/${id}`,data);
+           await axios.post(`https://devlink-o298.onrender.com/api/post/comment/${id}`,data);
             dispatch(getAllPost());
         }
         catch(err){
@@ -137,7 +137,7 @@ export function addComment(id,text){
 export function deleteComment(id,postId){
     return async function deleteCommentThunks(dispatch,getState){
         try{
-           await axios.delete(`http://localhost:5000/api/post/comment/${postId}/${id}`);
+           await axios.delete(`https://devlink-o298.onrender.com/api/post/comment/${postId}/${id}`);
             dispatch(getAllPost());
         }
         catch(err){
