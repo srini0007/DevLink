@@ -53,7 +53,7 @@ export function handleSign(name,email,pass){
                 password:pass
             };
             
-            const res= await axios.post('http://localhost:5000/api/users',data);
+            const res= await axios.post('https://devlink-o298.onrender.com/api/users',data);
             dispatch(AddErrorSign('success'));
             dispatch(register_success(res.data));
             dispatch(loadUser());
@@ -74,7 +74,7 @@ export function handleLog(email,pass){
                 email:email,
                 password:pass
             };
-            const res= await axios.post('http://localhost:5000/api/auth',data);
+            const res= await axios.post('https://devlink-o298.onrender.com/api/auth',data);
             dispatch(AddErrorLog('success'));
             dispatch(register_success(res.data));
             dispatch(loadUser());
