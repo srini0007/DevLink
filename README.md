@@ -1,7 +1,5 @@
 Deployment:  https://devlinkers.netlify.app/
 
-Absolutely, here's a modified README description for your project "DevLink":
-
 # DevLink: A Developer Social Network Platform
 
 Welcome to DevLink, a social network platform designed for developers to connect, collaborate, and showcase their expertise!
