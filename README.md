@@ -29,13 +29,4 @@ Welcome to DevLink, a social network platform designed for developers to connect
 - Backend: Node.js, Express, MongoDB
 - JWT Authentication
 
-For detailed instructions, API documentation, and contributions, please refer to the [project wiki](https://github.com/yourusername/devlink/wiki).
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
-Start connecting, collaborating, and exploring the world of developers with DevLink. Your contributions and feedback are highly valued!
-
-Happy networking,
-Your Name
