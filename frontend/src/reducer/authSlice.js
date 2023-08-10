@@ -41,7 +41,7 @@ export function loadUser(){
         }
         
         try {
-            const res= await axios.get('http://localhost:5000/api/auth');
+            const res= await axios.get('https://devlink-o298.onrender.com/api/auth');
             dispatch(user_loaded(res.data));
         } catch (err) {
             dispatch(clear_profile());
