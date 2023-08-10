@@ -95,7 +95,7 @@ export default profileSlice.reducer;
 export function getProfile(){
     return async function getProfileThunks(dispatch,getState){
         try{
-            const res=  await axios.get('https://devlink-o298.onrender.com/api/profile/me');
+            const res=  await axios.get('http://localhost:5000/api/profile/me');
             dispatch(get_cur_profile(res.data)); 
         }
         catch(err){
@@ -109,7 +109,7 @@ export function getProfile(){
 export function createProfile(formdata){
     return async function createProfileThunks(dispatch,getState){
         try{
-            const res= await axios.post('https://devlink-o298.onrender.com/api/profile',formdata);
+            const res= await axios.post('http://localhost:5000/api/profile',formdata);
             dispatch(get_profile(res.data));
             dispatch(profile_error('success'));
         }
@@ -122,7 +122,7 @@ export function createProfile(formdata){
 export function addExperience(formdata){
     return async function addExperienceThunks(dispatch,getstate){
         try {
-            const res = await axios.post('https://devlink-o298.onrender.com/api/profile/experience', formdata);
+            const res = await axios.post('http://localhost:5000/api/profile/experience', formdata);
         
             dispatch(get_profile(res.data));
             dispatch(exp_error('success'));
@@ -136,7 +136,7 @@ export function addExperience(formdata){
 export function deleteExperience(id){
     return async function deleteExperienceThunks(dispatch,getstate){
         try {
-            const res = await axios.delete(`https://devlink-o298.onrender.com/api/profile/experience/${id}`);
+            const res = await axios.delete(`http://localhost:5000/api/profile/experience/${id}`);
             console.log(res);
             dispatch(get_profile(res.data));
           } catch (err) {
@@ -148,7 +148,7 @@ export function deleteExperience(id){
 export function getAllProfiles(){
     return async function getAllProfilesThunks(dispatch,getState){
         try{
-            const res= await axios.get('https://devlink-o298.onrender.com/api/profile');
+            const res= await axios.get('http://localhost:5000/api/profile');
             dispatch(get_all_profile(res.data));
         }catch(err){
             console.log(err);
@@ -159,7 +159,7 @@ export function getAllProfiles(){
 export function getProfileById(id){
     return async function getProfileByIdThunks(dispatch,getState){
         try{
-            const res=await axios.get(`https://devlink-o298.onrender.com/api/profile/${id}`);
+            const res=await axios.get(`http://localhost:5000/api/profile/${id}`);
             dispatch(get_profile(res.data));
         }
         catch(err){
@@ -171,7 +171,7 @@ export function getProfileById(id){
 export function addEducation(formdata){
     return async function addEducationThunks(dispatch,getstate){
         try {
-            const res = await axios.put('https://devlink-o298.onrender.com/api/profile/education', formdata);
+            const res = await axios.put('http://localhost:5000/api/profile/education', formdata);
         
             dispatch(get_profile(res.data));
             console.log(res);
@@ -186,7 +186,7 @@ export function addEducation(formdata){
 export function deleteEducation(id){
     return async function deleteEducationThunks(dispatch,getstate){
         try {
-            const res = await axios.delete(`https://devlink-o298.onrender.com/api/profile/education/${id}`);
+            const res = await axios.delete(`http://localhost:5000/api/profile/education/${id}`);
             console.log(res);
             dispatch(get_profile(res.data));
           } catch (err) {
@@ -198,7 +198,7 @@ export function deleteEducation(id){
 export function getGithub(username){
     return async function getGithubThunks(dispatch,getstate){
         try {
-            const res = await axios.get(`https://devlink-o298.onrender.com/api/profile/github/${username}`);
+            const res = await axios.get(`http://localhost:5000/api/profile/github/${username}`);
             console.log(res);
             dispatch(get_repo(res.data));
           } catch (err) {
@@ -211,7 +211,7 @@ export function getGithub(username){
 export function deleteAccount(){
     return async function deleteAccountThunks(dispatch,getstate){
         try {
-            await axios.delete(`https://devlink-o298.onrender.com/api/profile`);
+            await axios.delete(`http://localhost:5000/api/profile`);
             dispatch(clear_profile());
             dispatch(log_out());
           } catch (err) {
