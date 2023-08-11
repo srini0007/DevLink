@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import formatDate from '../../utils/formatDate';
 import { deleteEducation } from '../../reducer/profileSlice';
 function Education() {
-    const {profile} = useSelector(state=>state.profile);
+    const {cur_profile} = useSelector(state=>state.profile);
     const dispatch= useDispatch();
-    const education= profile.education;
+    const education= cur_profile.education;
     if(education.length===0){
         return;
     }
