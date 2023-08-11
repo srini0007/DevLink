@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import formatDate from '../../utils/formatDate';
 import { deleteExperience } from '../../reducer/profileSlice';
 function Experience() {
-    const {profile} = useSelector(state=>state.profile);
+    const {cur_profile} = useSelector(state=>state.profile);
     const dispatch= useDispatch();
-    const experience= profile.experience;
+    const experience= cur_profile.experience;
     if(experience.length===0){
         return;
     }
