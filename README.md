@@ -1,5 +1,5 @@
 ## Deployment:  https://devlinkers.netlify.app/
-
+* if the header is not there , then the backend server is down
 # DevLink: A Developer Social Network Platform
 
 Welcome to DevLink, a social network platform designed for developers to connect, collaborate, and showcase their expertise!
